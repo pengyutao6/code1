@@ -34,6 +34,7 @@ public class Player {
                 System.out.println("篮球运动员");
                 break;
         }
-
+        //单例例子
+        Runtime runtime = Runtime.getRuntime();
     }
 }
