@@ -43,6 +43,5 @@ public class QueueDemo {
             }
         }
         System.out.println("______________________________");
-
     }
 }
