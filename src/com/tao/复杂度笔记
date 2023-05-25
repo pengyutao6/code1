@@ -1,0 +1,88 @@
+算法复杂度是指对于一个算法所需的计算资源（时间或空间）的度量。算法复杂度通常用大O符号表示，表示算法所需的最大资源量。算法复杂度是评价算法性能的重要指标，通常用于比较不同算法的效率。
+
+常见的算法复杂度有以下几种：
+
+    常数复杂度（O(1)）：算法的执行时间不随输入数据的大小而变化，常见于简单的赋值、比较或输出等操作。
+
+    线性复杂度（O(n)）：算法的执行时间与输入数据的大小成正比，常见于顺序查找、线性表的遍历等操作。
+
+    对数复杂度（O(log n)）：算法的执行时间与输入数据的大小的对数成正比，常见于二分查找等操作。
+
+    平方复杂度（O(n^2)）：算法的执行时间与输入数据的大小的平方成正比，常见于选择排序、冒泡排序等操作。
+
+    立方复杂度（O(n^3)）：算法的执行时间与输入数据的大小的立方成正比，常见于矩阵乘法等操作。
+
+    指数复杂度（O(2^n)）：算法的执行时间随着输入数据的大小呈指数级增长，常见于NP问题等操作。
+
+常数复杂度 O(1) 举例：
+
+```java
+public void printFirstElement(int[] arr) {
+    System.out.println(arr[0]);
+}
+```
+
+这个算法的时间复杂度为 O(1)，因为它只需要执行一次语句，与输入数据规模无关。
+
+线性复杂度 O(n) 举例：
+
+```java
+public void printAllElements(int[] arr) {
+    for (int i = 0; i < arr.length; i++) {
+        System.out.println(arr[i]);
+    }
+}
+```
+
+这个算法的时间复杂度为 O(n)，因为它需要遍历整个数组，时间复杂度随着输入数据规模 n 线性增长。
+
+对数复杂度 O(log n) 举例：
+
+```java
+public int binarySearch(int[] arr, int target) {
+    int left = 0;
+    int right = arr.length - 1;
+    while (left <= right) {
+        int mid = left + (right - left) / 2;
+        if (arr[mid] == target) {
+            return mid;
+        } else if (arr[mid] < target) {
+            left = mid + 1;
+        } else {
+            right = mid - 1;
+        }
+    }
+    return -1;
+}
+```
+
+这个算法的时间复杂度为 O(log n)，因为它使用二分查找的方法，每次将查找范围折半，时间复杂度随着输入数据规模 n 呈对数增长。
+
+
+平方复杂度 O(n^2) 举例：
+
+```java
+public void printAllPairs(int[] arr) {
+    for (int i = 0; i < arr.length; i++) {
+        for (int j = 0; j < arr.length; j++) {
+            System.out.println(arr[i] + \ + arr[j]);
+        }
+    }
+}
+```
+
+这个算法的时间复杂度为 O(n^2)，因为它嵌套了两个循环，每次执行的次数是 n，因此时间复杂度随着输入数据规模 n 呈平方级别增长。
+
+指数时间复杂度举例：
+
+```java
+public int fibonacci(int n) {
+    if (n == 0 || n == 1) {
+        return n;
+    } else {
+        return fibonacci(n-1) + fibonacci(n-2);
+    }
+}
+```
+
+这个算法用于计算斐波那契数列的第 n 个数，它的时间复杂度为 O(2^n)，因为每个数都需要递归计算两次，因此时间复杂度随着输入数据规模 n 呈指数级别增长。
