@@ -15,7 +15,7 @@ import java.util.Comparator;
  */
 public class Test2 {
 
-    private static String[] StringList = {"200-10_09.12.A00001", "200-11_09.12.A00011", "200-10_10.12.A00001"};
+    private static String[] StringList = {"200-10_09.12.A00001","200-10_09.12.A00002", "200-11_09.12.A00011", "200-10_10.12.A00001"};
 
     public static void main(String[] args) {
         String paramStr = "A";
@@ -34,19 +34,24 @@ public class Test2 {
             // 自定义排序规则
             String[] parts1 = str1.split("\\.");
             String[] parts2 = str2.split("\\.");
-
-            int result = parts1[0].compareTo(parts2[0]); // 按照第一个字段排序
-            if (result == 0) {
-                result = parts1[1].compareTo(parts2[1]); // 按照第二个字段排序
-                if (result == 0) {
-                    result = parts1[2].compareTo(parts2[2]); // 按照第三个字段排序
-                    if (result == 0) {
-                        result = parts1[3].compareTo(parts2[3]); // 按照第四个字段排序
-                    }
+            for (int i = 0; i < parts1.length; i++) {
+                int result = parts1[i].compareTo(parts2[i]);
+                if(result!=0){
+                    return result;
                 }
             }
+//            int result = parts1[0].compareTo(parts2[0]); // 按照第一个字段排序
+//            if (result == 0) {
+//                result = parts1[1].compareTo(parts2[1]); // 按照第二个字段排序
+//                if (result == 0) {
+//                    result = parts1[2].compareTo(parts2[2]); // 按照第三个字段排序
+//                    if (result == 0) {
+//                        result = parts1[3].compareTo(parts2[3]); // 按照第四个字段排序
+//                    }
+//                }
+//            }
 
-            return result;
+            return 0;
         }
     }
 }
