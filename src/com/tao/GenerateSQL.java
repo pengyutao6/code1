@@ -4,13 +4,17 @@ import org.junit.Test;
 
 public class GenerateSQL {
     public static void main(String[] args) {
-//        test();
+        test();
     }
 
     @Test
     private static void test(){
-        String data = "shopId,sellerId,order_id,order_type,order_status,last_updated_date,service_speed,sku,fnsku,disposition,requested_quantity,cancelled_quantity,disposed_quantity,shipped_quantity,in_process_quantity,removal_fee,currency,insert_date";
-        String tableName = "AY_Amazon_FBA_FULFILLMENT_REMOVAL_ORDER_DETAIL";
+        String data = "sellerid,\n" +
+                "\t\t\tcountry,product_name,fnsku,merchant_sku,asin,condition,supplier,supplier_part_no,\n" +
+                "\t\t\tcurrency_code,price,sales_last_30_days,units_sold_last_30_days,total_units,inbound,available,\n" +
+                "\t\t\tfc_transfer,fc_processing,customer_order,unfulfillable,fulfilled_by,days_of_supply,\n" +
+                "\t\t\talert,recommended_replenishment_qty,recommended_ship_date,lastupdate";
+        String tableName = "AY_Amazon_FBA_RESTOCK_RECOMMENDATIONS";
         insert(data,tableName);
         update(data,tableName);
     }
