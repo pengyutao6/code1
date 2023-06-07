@@ -13,6 +13,7 @@ import com.aspose.words.Document;
 import com.aspose.words.ImageSaveOptions;
 import com.aspose.words.License;
 import com.aspose.words.SaveFormat;
+import org.junit.Test;
 
 /**
  * 以下源码转载于：https://blog.csdn.net/u011134399/article/details/118892122
@@ -26,7 +27,8 @@ public class WordToPDF {
             String wordFilePath = "Word文件的路径";
             // 设置JPG图片路径
             String jpgImagePath = "jpg图片路径";
-
+            // 设置PDF文件路径
+            String pdfFilePath = "PDF文件的路径";
             // 创建Word文件对象
             File wordFile = new File(wordFilePath);
             // 创建输入流
@@ -36,6 +38,7 @@ public class WordToPDF {
             // 合并图片并保存为JPG格式
             BufferedImage mergedImage = mergeImages(false, wordImages);
             saveImageAsJPEG(mergedImage, jpgImagePath);
+//            wordToPDF(wordFilePath,pdfFilePath);
         } catch (Exception e) {
             e.printStackTrace();
         }
