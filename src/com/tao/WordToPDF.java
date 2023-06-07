@@ -21,7 +21,12 @@ import org.junit.Test;
  */
 
 public class WordToPDF {
-    public static void main(String[] args) {
+
+    /**
+     * 测试Word文档转图片
+     */
+    @Test
+    public void TestWordToImages(){
         try {
             // 设置Word文件路径
             String wordFilePath = "Word文件的路径";
@@ -38,7 +43,23 @@ public class WordToPDF {
             // 合并图片并保存为JPG格式
             BufferedImage mergedImage = mergeImages(false, wordImages);
             saveImageAsJPEG(mergedImage, jpgImagePath);
-//            wordToPDF(wordFilePath,pdfFilePath);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    /**
+     * 测试Word文档转PDF文件
+     */
+    @Test
+    public void TestWordToPDF(){
+        try {
+            // 设置Word文件路径
+            String wordFilePath = "Word文件的路径";
+            // 设置PDF文件路径
+            String pdfFilePath = "PDF文件的路径";
+            //word转DPF
+            wordToPDF(wordFilePath,pdfFilePath);
         } catch (Exception e) {
             e.printStackTrace();
         }
