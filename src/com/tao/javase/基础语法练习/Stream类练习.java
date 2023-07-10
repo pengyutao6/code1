@@ -14,6 +14,29 @@ public class Stream类练习 {
         推荐Stream教程文章:https://juejin.cn/post/7118991438448164878#comment
      */
 
+    @Test
+    public void testGetTargetUsers(){
+        List<String> ids = Arrays.asList("205","10","308","49","627","193","111", "193");
+        List<User> collect = ids.stream().filter(s -> s.length() > 2)
+                .distinct()
+                .map(Integer::valueOf)
+                .limit(3)
+                .map(id -> {
+                    User user = new User();
+                    user.setId(id);
+                    return user;
+                }).collect(Collectors.toList());
+        System.out.println(collect);
+        /*
+            1、使用filter过滤掉不符合条件的数据
+            2、通过distinct对存量元素进行去重操作
+            3、通过map操作将字符串转成整数类型
+            4、借助sorted指定按照数字大小正序排列
+            5、使用limit截取排在前3位的元素
+            6、又一次使用map将id转为Dept对象类型
+            7、使用collect终止操作将最终处理后的数据收集到list中
+       */
+    }
 
     @Test
     public void testPeekAndForeach() {
