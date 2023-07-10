@@ -1,6 +1,5 @@
 package com.tao;
 
-import jxl.demo.Demo;
 
 public class Demo7 extends Demo6{
     public static void main(String[] args) {
