@@ -12,6 +12,7 @@ public class Stream类练习 {
 
     /*
         推荐Stream教程文章:https://juejin.cn/post/7118991438448164878#comment
+        注意：Stream流一旦调用了终止操作的方法，下一次再次调用它的方法，会抛出异常：stream has already been operated upon or closed
      */
 
     @Test
