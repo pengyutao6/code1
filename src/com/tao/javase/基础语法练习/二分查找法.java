@@ -1,4 +1,4 @@
-package com.tao;
+package com.tao.javase.基础语法练习;
 
 public class 二分查找法 {
     /**
@@ -7,13 +7,13 @@ public class 二分查找法 {
      * @param target 目标值
      * @return -1表示未找到
      */
-    public int binarySearch2(int[] nums,int target){
+    public static int binarySearch(int[] nums,int target){
         //左指针
         int left = 0;
         //右指针
         int right = nums.length-1;
         while (left<=right){
-            int mid = left + (left+right)/2;
+            int mid = left + (right-left)/2;
             //找到目标值，返回下标值
             if(nums[mid]==target){
                 return mid;
@@ -29,4 +29,5 @@ public class 二分查找法 {
         }
         return -1;
     }
+
 }
