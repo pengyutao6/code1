@@ -1,4 +1,4 @@
-package com.tao.缓存;
+package com.tao.huancun;
 
 import com.google.common.cache.CacheBuilder;
 import com.google.common.cache.CacheLoader;
@@ -13,7 +13,7 @@ import java.util.*;
 import java.util.concurrent.ExecutionException;
 import java.util.concurrent.TimeUnit;
 
-public class Guava缓存 {
+public class GuavaDemo {
 
     CacheBuilder<Object, Object> cacheBuilder = CacheBuilder.newBuilder()
             .maximumSize(100)   //最大存储条目
@@ -87,7 +87,7 @@ public class Guava缓存 {
             2、用户扫描二维码后，请求到服务端，服务端获取设备码，且从 deviceCodeCache 获取验证码，没有就重新生成，然后从 verifyCodeCache对象 取得 长连接
             3、最后校验通过后,使用 Spring的SseEmitter 去响应客户端：将session放入这个SseEmitter,且设置cookie,最后返回客户端,返回true,登录成功.
      */
-    public Guava缓存(Object loginService){
+    public GuavaDemo(Object loginService){
         this.sessionService = loginService;
         //创建验证码缓存实例,最多支持300个验证码,有效时间5分钟
         verifyCodeCache = CacheBuilder.newBuilder().maximumSize(300).expireAfterAccess(5,TimeUnit.MINUTES).build(new CacheLoader<String, String>() {

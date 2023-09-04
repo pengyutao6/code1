@@ -1,6 +1,6 @@
 package com.tao;
 
-public enum 枚举demo {
+public enum EnumDemo {
     PING_PONG,
     BASKETBALL,
     FOOTBALL

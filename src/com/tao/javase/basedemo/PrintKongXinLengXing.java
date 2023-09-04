@@ -1,6 +1,6 @@
-package com.tao.javase.基础语法练习;
+package com.tao.javase.basedemo;
 
-public class 打印空心菱形 {
+public class PrintKongXinLengXing {
     //一般棱形分别上半和下半，所以是两个for循环
     //然后里面有三个元素。一个是从上到下的行数，一个是从左到右的空格，以及*符合
     //所以一个for循环里面会有两个for循环，一个根据位置规则打印出空格，一个打印出*

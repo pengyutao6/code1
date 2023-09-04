@@ -1,6 +1,6 @@
-package com.tao.javase.基础语法练习;
+package com.tao.javase.basedemo;
 
-public class 强制类型转换练习 {
+public class QiangZhiChange {
     public static void main(String[] args) {
         byte b1 = 10;
         byte b2 = 20;

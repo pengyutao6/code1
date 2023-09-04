@@ -1,6 +1,6 @@
-package com.tao.javase.基础语法练习;
+package com.tao.javase.basedemo;
 
-public class 二分查找法 {
+public class ErFenSearch {
     /**
      *
      * @param nums  数组

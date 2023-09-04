@@ -1,8 +1,8 @@
-package com.tao.javase.基础语法练习;
+package com.tao.javase.basedemo;
 
 
 
-public class 数据类型转换练习 {
+public class DataTypeChangeDemo {
 
     public static void main(String[] args) {
         short s1 = 120;

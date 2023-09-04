@@ -1,4 +1,4 @@
-package com.tao.javase.基础语法练习;
+package com.tao.javase.basedemo;
 
 import org.junit.Test;
 
@@ -6,7 +6,7 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
 
-public class Stream类练习 {
+public class StreamDemo {
 
 
     /*

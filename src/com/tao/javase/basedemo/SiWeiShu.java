@@ -1,6 +1,6 @@
-package com.tao.javase.基础语法练习;
+package com.tao.javase.basedemo;
 
-public class 获取一个四位数的个位十位百位千位 {
+public class SiWeiShu {
     public static void main(String[] args) {
         //1.定义一个变量，赋值为一个四位数整数，例如1234
         int num = 1234;

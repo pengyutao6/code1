@@ -1,6 +1,6 @@
-package com.tao.javase.基础语法练习;
+package com.tao.javase.basedemo;
 
-public class 冒泡排序 {
+public class MaoPaoSort {
 
     public static void main(String[] args) {
         int arr[] = {1,6,1,5,2,6,7,3,7,82,-1};
