@@ -1,4 +1,4 @@
-package com.tao.huancun;
+package com.tao.guavademo;
 
 import com.google.common.cache.CacheBuilder;
 import com.google.common.cache.CacheLoader;
