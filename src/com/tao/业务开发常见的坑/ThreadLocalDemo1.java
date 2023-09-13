@@ -5,7 +5,7 @@ import java.util.Date;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
-public class ThreadDemo1 {
+public class ThreadLocalDemo1 {
     //通过使用ThreadLocal保证SimpleDateFormat对象的安全性
     private static SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
     //lambda写法
