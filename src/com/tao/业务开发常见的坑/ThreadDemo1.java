@@ -8,6 +8,8 @@ import java.util.concurrent.Executors;
 public class ThreadDemo1 {
     //通过使用ThreadLocal保证SimpleDateFormat对象的安全性
     private static SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
+    //lambda写法
+    private static ThreadLocal<SimpleDateFormat> threadLocal2 = ThreadLocal.withInitial(()->new SimpleDateFormat("yyyy-MM-dd hh:mm:ss"));
     private static ExecutorService executorService = Executors.newFixedThreadPool(10);
     private static ThreadLocal<SimpleDateFormat> threadLocal = new ThreadLocal<SimpleDateFormat>(){
         @Override
